@@ -1,0 +1,436 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+a {
+  text-decoration: none;
+  color:currentColor;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* lato-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/lato-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* lato-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/lato-v24-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* lato-900 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/lato-v24-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  html {
+    box-sizing: border-box;
+  }
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  body {
+    font-family: 'Lato' Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.2;
+    background-color: black;
+    max-width: 1366px;
+    margin: 0 auto;
+  }
+  .next {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: white;
+    border: none;
+    transition: 0.15s all;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: transparent;
+    height: 30px;
+    width: 90px;
+    transition: 0.15 all;
+  }
+  .next:hover {
+    cursor: pointer;
+    border: 0.5px solid white;
+    transform: scale(1.02);
+  }
+  .next:active {
+    transform: scale(1);
+  }
+.header {
+  width: 1440px;
+  height: 962px;
+  flex-shrink: 0;
+  background-image: url(https://w-dog.ru/wallpapers/0/7/336236723670637/2014-ac-schnitzer-acs4-bmw-4-j-serii-gran-coupe-f36-bmv.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.general-box {
+  margin: 0 auto;
+  max-width: 1060px;
+}
+.wrapper_header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+.left-img {
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.header_left_section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 200px;
+}
+.header_right_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.header_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.links {
+  font-display: swap; 
+  font-family:'Times New Roman', Times, serif;
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/lato-v24-latin-900.woff2') format('woff2'); 
+  margin: 15px;
+  color: white;
+  text-decoration: none;
+  transition: 0.15s all;
+}
+.links:hover {
+  text-decoration: underline;
+}
+.back-grid {
+  max-width: 1060px;
+  margin: 0 auto;
+  animation: render 2s ease-in-out infinite;
+}
+  @keyframes render {
+    0% {background-color: black }
+    50% {background-color: rgb(17, 17, 17)}
+    100% {background-color: rgb(0, 0, 0)}
+
+  }
+.why_us {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+.grid {
+  margin-top: 35px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.describ {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.benefit_grid1 {
+  font-size: 50px;
+  font-weight: 600;
+  color: white;
+}
+.img_pic1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text1 {
+  color:white;
+  font-size: 20px;
+  font-weight: 600;
+}
+.text2 {
+  color:white;
+  font-size: 20px;
+  font-weight: 600;
+}
+.text3 {
+  color:white;
+  font-size: 20px;
+  font-weight: 600;
+}
+.text_support1 {
+  margin-top: 10px;
+  background-color: gray;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  line-height: 19px;
+}
+.text_support2 {
+  margin-top: 10px;
+  background-color: gray;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  line-height: 19px;
+
+}
+.text_support3 {
+  margin-top: 10px;
+  background-color: gray;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  line-height: 19px;
+
+}
+.img_1 {
+  padding: 10px;
+  background-color: gray;
+  border-radius: 20px;
+}
+/* DISCOVERY AMZ... */
+.text_bellow{
+  position: relative;
+  margin-top: 350px;
+  margin-left: -180px;
+  font-size: 50px;
+  font-weight: 600;
+  color: white;
+  background: transparent;
+  z-index: 100;
+  text-transform: uppercase;
+  cursor:default;
+
+}
+.h2_txt {
+  margin-left: 1px;
+  border:0.5px solid white;
+  width: 750px;
+  padding-left: 2px;
+}
+.span1 {
+margin-left: 220px;
+position: relative;
+z-index: 10;
+}
+.span2 {
+  position: absolute;
+  text-decoration: underline;
+  bottom: 28px;
+  margin-left: -31px;
+  width: 40px;
+  height: 3px;
+  background-color: white;
+  border-radius: 4px;
+}
+.span3 {
+  position: absolute;
+  text-decoration: underline;
+  bottom: 28px;
+  margin-left: -9px;
+  width: 40px;
+  height: 3px;
+  background-color: white;
+  border-radius: 4px;
+}
+.but1 {
+  margin-top: 270px;
+  margin-left: 20px;
+  color: white;
+  border: none;
+  transition: 0.15s all;
+  font-size: 25px;
+  font-weight: 600;
+  background-color: transparent;
+  height: 50px;
+  width: 350px;
+}
+.but1:hover {
+  cursor: pointer;
+  border: 0.5px solid white;
+  scale: 1.05;
+}
+.but1:active {
+  scale: 1;
+}
+/* section2 */
+/* GRID */
+.section_2 {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+.grid_s2 {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr ;
+  gap: 10px;
+  row-gap: 10px;
+
+}
+.grid_s2>div:nth-child(3){
+  grid-column: 1/3;
+}
+/* BOX 1 */
+.img_s1{
+  position: relative;
+  overflow: hidden;
+}
+.span_s1 {
+  position: absolute;
+  color: white;
+  bottom: 35px;
+  left: 25px;
+  font-size: 55px;
+  z-index: 100;
+  cursor: pointer;
+}
+.salon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: flex;
+  flex-shrink: 0;
+  transition: 2.5s all;
+  }
+  .img_s1 .salon:hover {
+    transform:scale(1.5, 1.5);
+    cursor: pointer;
+  }
+  /* BOX 2 */
+.img_s2{
+  position: relative;
+  overflow: hidden;
+}
+.specialists {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: flex;
+  flex-shrink: 0;
+  transition: 2.5s all;
+}
+.specialists:hover {
+  cursor: pointer;
+  transform: scale(1.5, 1.5);
+}
+.span_s2 {
+  position: absolute;
+  color: white;
+  bottom: 35px;
+  left: 25px;
+  font-size: 55px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+/* THIRD BOX */
+.img_s22 {
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items:end;
+  overflow: hidden;
+}
+.span_s22 {
+  position: absolute;
+  color: white;
+  font-size: 55px;
+  z-index: 900;
+  cursor: pointer;
+  width: 100%;
+}
+.side-car {
+  width: 100%;
+  object-fit:cover;
+  object-position: center;
+  height: 300px;
+  transition: 1.5s all;
+}
+.img_s22 .side-car:hover {
+  cursor: pointer;
+  transform: scale(1.09, 1.09);
+}
+.car-link {
+  width: 100%;
+}
+.footer {
+  text-align: left;
+  width: 100%;
+  height: 50vh;
+  background-color: rgb(107, 107, 107);
+  color: rgb(224, 224, 224);
+  font-size: 14px;
+  margin-top: 1px;
+}
